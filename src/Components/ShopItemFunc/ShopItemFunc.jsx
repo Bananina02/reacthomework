@@ -1,6 +1,6 @@
 import classes from './ShopItemFunc.module.css'
-export const ShopItemFunc = (propt) => {
-    const {brand, title, description, descriptionFull, price, currency} = propt.item
+export const ShopItemFunc = ({item}) => {
+    const {brand, title, description, descriptionFull, price, currency} = item
     return <div className="main-content">
         <h2 className={classes ['brand']}>{brand}</h2>
         <h1 className={classes ['title']}>{title}</h1>
@@ -15,5 +15,4 @@ export const ShopItemFunc = (propt) => {
             <button>Добавить в корзину</button>
         </div>
     </div>
-
 }
